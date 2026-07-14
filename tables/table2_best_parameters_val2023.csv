@@ -1,0 +1,6 @@
+Configuration,Best Parameters,Val RMSE 2023
+SARIMA,"(1,1,1)(0,1,1)[52]",2105
+XGBoost Thailand Self-lag,"n=200, depth=2, lr=0.1",2334
+XGBoost Guatemala,"n=600, depth=3, lr=0.1",3501
+XGBoost Lao PDR,"n=200, depth=3, lr=0.02",3509
+XGBoost Korea,"n=200, depth=2, lr=0.02",3572

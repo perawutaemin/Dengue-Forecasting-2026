@@ -1,0 +1,10 @@
+Configuration,Step,Features Used,RMSE,MAE,Selected
+Lao PDR,1,"count52, TMAX13, TAVG10",2229,1803,No
+Lao PDR,2,"count52, TAVG10",1974,1526,Yes
+Lao PDR,3,count52 only,2103,1571,No
+South Korea,1,"count50, PRCP51",2020,1567,Yes
+South Korea,2,count50 only,2609,2200,No
+Guatemala,1,"count52, TMAX9, TMIN7, TAVG7",2455,1897,No
+Guatemala,2,"count52, TMAX9, TMIN7",2469,1911,No
+Guatemala,3,"count52, TMAX9",2379,2065,Yes
+Guatemala,4,count52 only,3991,3422,No

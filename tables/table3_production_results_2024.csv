@@ -1,0 +1,6 @@
+Configuration,RMSE,MAE
+SARIMA,3965,3565
+XGBoost Thailand Self-lag,2968,2344
+XGBoost Guatemala,2331,1996
+XGBoost Lao PDR,1730,1407
+XGBoost Korea,1622,1293
