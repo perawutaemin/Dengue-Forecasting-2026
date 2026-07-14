@@ -1,0 +1,3 @@
+feature,importance,kind
+count_lag_52,0.599200,count
+TAVG_lag_10,0.400800,weather

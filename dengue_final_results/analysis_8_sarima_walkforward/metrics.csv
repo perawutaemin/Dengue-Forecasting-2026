@@ -1,0 +1,3 @@
+phase,train,test,rmse,r2,param
+Validation,2021-2022,2023,2105.5,0.195,"SARIMA(1,1,1)(0,1,1)"
+Production,2022-2023,2024,3965.3,-11.912,"SARIMA(1,1,1)(0,1,1)"

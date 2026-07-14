@@ -1,0 +1,14 @@
+country,count_lag,count_corr,weather_features,best_features,n_features,source,rmse,mae,sarima_rmse,sarima_mae,delta_rmse_vs_sarima,beats_sarima,n_estimators,max_depth,learning_rate,pred_std,is_flat
+Samoa,49,0.7256,,count_lag_49,1,pruned+tuned,1340.79,937.38,3965.32,3564.61,-2624.53,True,200,2,0.05,316.79,False
+South Korea,50,0.7606,PRCP_lag_51,count_lag_50|PRCP_lag_51,2,pruned+tuned,1622.15,1292.5,3965.32,3564.61,-2343.17,True,200,2,0.02,1182.36,False
+Peru,12,0.8177,,count_lag_12,1,pruned+tuned,1724.64,1407.97,3965.32,3564.61,-2240.68,True,200,2,0.1,1471.76,False
+Lao PeopleS Democratic Republic,52,0.7978,TMAX_lag_13|TAVG_lag_10,count_lag_52|TAVG_lag_10,2,pruned+tuned,1729.53,1406.9,3965.32,3564.61,-2235.79,True,200,3,0.02,1577.15,False
+United States Of America,48,0.7485,TMAX_lag_7|TAVG_lag_27,count_lag_48,1,pruned+tuned,1764.65,1171.28,3965.32,3564.61,-2200.67,True,200,2,0.02,1037.36,False
+Bolivia,25,0.7828,,count_lag_25,1,pruned,1855.23,1368.15,3965.32,3564.61,-2110.09,True,400,3,0.05,1747.78,False
+Puerto Rico,39,0.7591,TMAX_lag_2|TMIN_lag_3|TAVG_lag_3,count_lag_39|TMIN_lag_3|TAVG_lag_3,3,pruned+tuned,2007.2,1602.45,3965.32,3564.61,-1958.12,True,200,2,0.02,1876.38,False
+Nicaragua,52,0.7591,,count_lag_52,1,pruned+tuned,2201.71,1760.12,3965.32,3564.61,-1763.61,True,200,3,0.02,1765.51,False
+Guatemala,52,0.7373,TMAX_lag_9|TMIN_lag_7|TAVG_lag_7,count_lag_52|TMAX_lag_9,2,pruned+tuned,2331.33,1995.84,3965.32,3564.61,-1633.99,True,600,3,0.1,1762.34,False
+Dominican Republic,45,0.7996,TMAX_lag_2|TAVG_lag_3,count_lag_45|TMAX_lag_2|TAVG_lag_3,3,pruned+tuned,2476.1,1976.11,3965.32,3564.61,-1489.22,True,400,2,0.02,2167.51,False
+Costa Rica,52,0.711,,count_lag_52,1,pruned+tuned,2593.33,2110.12,3965.32,3564.61,-1371.99,True,200,2,0.02,2144.95,False
+Argentina,19,0.7385,,count_lag_19,1,pruned+tuned,2694.83,2090.62,3965.32,3564.61,-1270.49,True,200,3,0.02,2048.48,False
+Paraguay,28,0.7315,,count_lag_28,1,pruned+tuned,2832.78,2561.38,3965.32,3564.61,-1132.54,True,200,2,0.02,1936.12,False

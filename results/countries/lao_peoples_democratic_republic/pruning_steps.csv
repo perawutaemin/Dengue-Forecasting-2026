@@ -1,0 +1,4 @@
+step,n_features,features,feature_kinds,rmse,mae,n_test,removed_next,importances
+0,3,count_lag_52|TMAX_lag_13|TAVG_lag_10,count|weather|weather,2229.31,1802.56,52,TMAX_lag_13,count_lag_52:0.6036|TMAX_lag_13:0.1931|TAVG_lag_10:0.2033
+1,2,count_lag_52|TAVG_lag_10,count|weather,1974.28,1526.11,52,TAVG_lag_10,count_lag_52:0.5992|TAVG_lag_10:0.4008
+2,1,count_lag_52,count,2102.9,1570.5,52,,count_lag_52:1.0000

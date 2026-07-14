@@ -1,0 +1,17 @@
+rank,short,features,n_estimators,max_depth,learning_rate,val_rmse_2023,rmse,mae,is_flat,protocol_ok
+1,Kiribati,count_lag_42,200,2,0.05,3310.55,1205.96,819.24,True,True
+2,Vanuatu,count_lag_47,200,2,0.02,3504.01,1215.96,825.03,False,True
+3,N. Mariana Is.,count_lag_47,200,2,0.05,3436.57,1284.33,865.2,True,True
+4,Samoa,count_lag_49,200,2,0.05,3254.74,1340.79,937.38,False,True
+5,South Korea,count_lag_50|PRCP_lag_51,200,2,0.02,3571.75,1622.15,1292.5,False,True
+6,Peru,count_lag_12,200,2,0.1,2817.6,1724.64,1407.97,False,True
+7,Lao PDR,count_lag_52|TAVG_lag_10,200,3,0.02,3509.28,1729.53,1406.9,False,True
+8,USA,count_lag_48,200,2,0.02,3560.76,1764.65,1171.28,False,True
+9,Puerto Rico,count_lag_39|TMIN_lag_3|TAVG_lag_3,200,2,0.02,3629.64,2007.2,1602.45,False,True
+10,Bolivia,count_lag_25,600,3,0.1,2454.1,2013.76,1443.63,False,True
+11,Nicaragua,count_lag_52,200,3,0.02,3638.47,2201.71,1760.12,False,True
+12,Guatemala,count_lag_52|TMAX_lag_9,600,3,0.1,3501.35,2331.33,1995.84,False,True
+13,Dominican Rep.,count_lag_45|TMAX_lag_2|TAVG_lag_3,400,2,0.02,2910.7,2476.1,1976.11,False,True
+14,Costa Rica,count_lag_52,200,2,0.02,3489.84,2593.33,2110.12,False,True
+15,Argentina,count_lag_19,200,3,0.02,3550.04,2694.83,2090.62,False,True
+16,Paraguay,count_lag_28,200,2,0.02,3634.74,2832.78,2561.38,False,True

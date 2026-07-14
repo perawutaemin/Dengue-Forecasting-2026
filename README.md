@@ -3,7 +3,7 @@
 Peerawut Eiamin · Thanin Methiyothin  
 Burapha University, Chonburi, Thailand
 
-This repository contains the conference paper draft and the figures used in  
+This repository contains the conference paper draft, figures, **datasets**, and **experiment code** used in  
 [`paper/conference-template-a4_Focus.docx`](paper/conference-template-a4_Focus.docx).
 
 **Keywords:** dengue forecasting, time-series analysis, SARIMA, XGBoost, cross-country correlation, weather variables, epidemic surveillance, walk-forward validation.
@@ -31,11 +31,61 @@ Primary metrics: **RMSE** and **MAE** on production year **2024**.
 ```text
 Dengue-Forecasting-2026/
 ├── README.md
+├── requirements.txt
 ├── paper/
 │   └── conference-template-a4_Focus.docx
-├── figures/          # Fig. 1–6 (PNG + SVG)
-└── tables/           # Table I–III as CSV
+├── figures/                 # Fig. 1–6 (PNG + SVG)
+├── tables/                  # Table I–III as CSV
+├── dataset/
+│   ├── clean_data/
+│   │   ├── Dengue_data/     # weekly dengue (normal + timelag)
+│   │   └── Weather_data*/   # TMAX/TMIN/TAVG/PRCP
+│   └── correlation/         # Thailand self-lag screening CSV
+├── code/                    # experiment scripts
+├── results/                 # saved predictions / prune tables
+└── dengue_final_results/    # SARIMA baseline predictions used by prune script
 ```
+
+---
+
+## Dataset
+
+| Path | Content |
+|---|---|
+| `dataset/clean_data/Dengue_data/normal_data/` | Weekly counts: Thailand, Korea, Lao PDR, Guatemala |
+| `dataset/clean_data/Dengue_data/timelag_data/` | Dengue lag_0…lag_52 (2020–2024), including all OpenDengue countries used in the 16-country screen |
+| `dataset/clean_data/Weather_data_2019_2024/` | Weekly weather for Thailand, Lao PDR, Guatemala (+ timelag tables) |
+| `dataset/clean_data/Weather_data/` | South Korea weekly weather (+ cleaned fallback) |
+| `dataset/correlation/04_thailand_selflag_correlation_2022_2023.csv` | Thailand self-lag corr ≥ 0.6 screen |
+
+**Sources (paper):** Thailand cases — ASEAN–South Korea GFID / Burapha AIDA; other countries — OpenDengue; weather — NOAA / GHCN.
+
+---
+
+## Experiment code
+
+Install dependencies from the repo root:
+
+```bash
+pip install -r requirements.txt
+```
+
+| Script | Role | Output |
+|---|---|---|
+| [`code/sarima_walkforward_clean.py`](code/sarima_walkforward_clean.py) | SARIMA Box–Jenkins + walk-forward (val 2023 → prod 2024) | `results/sarima/` |
+| [`code/xgboost_thailand_self.py`](code/xgboost_thailand_self.py) | XGBoost Thailand Self-lag | `results/thailand_self/` |
+| [`code/xgboost_thailand_self_pruning.py`](code/xgboost_thailand_self_pruning.py) | Self-lag backward pruning | `results/thailand_self_pruning/` |
+| [`code/run_16countries_prune_vs_sarima.py`](code/run_16countries_prune_vs_sarima.py) | Correlation screen → prune weather → retune → vs SARIMA | `results/prune_vs_sarima/` |
+| [`code/xgboost_hyperparam_tuning.py`](code/xgboost_hyperparam_tuning.py) | Optional legacy hyperparameter sweep | `results/hyperparam_tuning/` |
+
+See [`code/README.md`](code/README.md) for full run notes.
+
+**Pre-computed paper results** (no retrain needed):
+
+- `results/thailand_self/` — Self-lag 2024 predictions / metrics  
+- `results/countries/{lao,south_korea,guatemala}/` — prune paths + best predictions  
+- `tables/` — Tables I–III  
+- `dengue_final_results/analysis_8_sarima_walkforward/predictions_2024.csv` — SARIMA production forecast  
 
 ---
 

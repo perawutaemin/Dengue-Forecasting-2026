@@ -1,0 +1,4 @@
+feature,importance,kind,will_drop_next
+count_lag_52,0.603600,count,False
+TAVG_lag_10,0.203300,weather,False
+TMAX_lag_13,0.193100,weather,True

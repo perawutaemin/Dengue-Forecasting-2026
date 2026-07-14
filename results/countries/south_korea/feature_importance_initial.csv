@@ -1,0 +1,3 @@
+feature,importance,kind,will_drop_next
+count_lag_50,0.554300,count,False
+PRCP_lag_51,0.445700,weather,True
